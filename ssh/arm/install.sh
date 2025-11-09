@@ -56,10 +56,6 @@ else
     fi
 fi
 
-# Start SSH server
-echo "[ssh-setup] Starting SSH server..."
-run_safe sshd
-
 # Display connection info
 IP=$(ip addr show wlan0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1 | head -n 1)
 if [ -z "$IP" ]; then

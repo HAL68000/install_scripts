@@ -13,15 +13,15 @@ fi
 
 PORT=8022
 echo
-echo "[ssh-setup] SSH server is running (if sshd started successfully)."
-echo "[ssh-setup] Connection info:"
+echo "SSH server is running (if sshd started successfully)."
+echo "Connection info:"
 echo "    ssh ${USERNAME}@${IP} -p ${PORT}"
 echo
-echo "[ssh-setup] Password for the account has been set to: ${PASSWORD}"
+echo "Password for the account has been set to: ${PASSWORD}"
 echo
-echo "SECURITY NOTE: The password '123changeme' is weak. Change it as soon as possible with: passwd"
+echo "SECURITY NOTE: The password '123changeme' is weak. Tap on Terminal to change it as soon as possible with: passwd"
 echo
-echo "[ssh-setup] If automatic password set failed, run 'passwd' and enter a new password interactively."
-echo "[ssh-setup] To stop the SSH server, run: pkill sshd"
+echo "If automatic password set failed, run 'passwd' and enter a new password interactively."
+echo "To stop the SSH server, run: pkill sshd or tap the Stop button."
 
-echo "[ssh-setup] SSH installation completed!"
+echo "SSH installation completed!"

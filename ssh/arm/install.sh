@@ -11,7 +11,7 @@ pkg update -y && pkg upgrade -y
 
 # Install OpenSSH
 echo "[ssh-setup] Installing OpenSSH..."
-pkg install -y openssh
+pkg install -y --option Dpkg::Options::="--force-confnew" openssh
 
 # Generate SSH keys if missing
 if [ ! -f ~/.ssh/id_rsa ]; then

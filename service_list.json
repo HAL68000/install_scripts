@@ -1,1 +1,1 @@
-[{"name": "n8n", "description": "An example service", "install_script": "n8n/arm/install.sh"}, {"name": "ssh", "description": "enable SSH access", "install_script": "ssh/arm/install.sh"}]
+[{"name": "n8n", "description": "An example service", "install_script": "n8n/arm/install.sh", "uninstall_script": "n8n/arm/uninstall.sh"}, {"name": "ssh", "description": "enable SSH access", "install_script": "ssh/arm/install.sh", "uninstall_script": "ssh/arm/uninstall.sh"}]

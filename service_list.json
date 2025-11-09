@@ -1,1 +1,20 @@
-[{"name": "n8n", "description": "An example service", "install_script": "n8n/arm/install.sh", "uninstall_script": "n8n/arm/uninstall.sh"}, {"name": "ssh", "description": "enable SSH access", "install_script": "ssh/arm/install.sh", "uninstall_script": "ssh/arm/uninstall.sh"}]
+[
+    {
+        "name": "n8n",
+        "description": "An example service",
+        "install_script": "n8n/arm/install.sh",
+        "uninstall_script": "n8n/arm/uninstall.sh",
+        "start_command": "n8n",
+        "stop_command": "n8n stop"
+    },
+    {
+        "name": "ssh",
+        "description": "enable SSH access",
+        "install_script": "ssh/arm/install.sh",
+        "uninstall_script": "ssh/arm/uninstall.sh",
+        "start_command": "sshd",
+        "stop_command": "sshd stop",
+        "post_installation_script": "ssh/arm/post_install.sh"
+
+    }
+]

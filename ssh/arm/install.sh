@@ -1,5 +1,14 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# Reset Termux mirrors
+termux-change-repo
+pkg update -y
+pkg upgrade -y
+# Reinstall essential libraries
+pkg install -y proot tar wget curl
 
+# Reinstall apt and core libraries
+pkg install -y apt
+pkg install -y liblz4
 echo "[ssh-setup] Starting SSH installation and setup..."
 
 set -e

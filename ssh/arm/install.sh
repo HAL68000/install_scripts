@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Reset Termux mirrors
-termux-change-repo
 pkg update -y
 pkg upgrade -y
 # Reinstall essential libraries
@@ -47,9 +46,6 @@ expect eof
 
 echo "[ssh-setup] Password has been set successfully."
 
-# Start SSH server
-echo "[ssh-setup] Starting SSH server..."
-sshd
 
 # Display connection info
 IP=$(ip addr show wlan0 2>/dev/null | grep 'inet ' | awk '{print $2}' | cut -d/ -f1 | head -n 1)
@@ -62,13 +58,13 @@ fi
 
 PORT=8022
 echo
-echo "[ssh-setup] SSH server is running (if sshd started successfully)."
+echo "[ssh-setup] SSH server is installed. To start the SSH server, tap on the "START" button."
 echo "[ssh-setup] Connection info:"
 echo "    ssh ${USERNAME}@${IP} -p ${PORT}"
 echo
 echo "[ssh-setup] Password for the account has been set to: ${PASSWORD}"
 echo "SECURITY NOTE: The password '123changeme' is weak. Change it as soon as possible with: passwd"
 echo
-echo "[ssh-setup] To stop the SSH server, run: pkill sshd"
+echo "[ssh-setup] To stop the SSH server, tap on the "STOP" button."
 
 echo "[ssh-setup] SSH installation completed!"

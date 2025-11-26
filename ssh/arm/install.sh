@@ -6,7 +6,7 @@ pkg update -y
 pkg upgrade -y
 
 echo "[ssh-setup] Reinstalling essential libraries..."
-pkg install -y proot tar wget curl apt liblz4
+pkg install -y proot tar wget curl apt liblz4 termux-auth
 
 echo "[ssh-setup] Installing OpenSSH, expect, and termux-auth (auto-confirming config changes)..."
 pkg install -y --option Dpkg::Options::="--force-confnew" openssh expect termux-auth

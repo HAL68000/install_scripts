@@ -1,24 +1,15 @@
 #!/data/data/com.termux/files/usr/bin/bash
-# Reset Termux mirrors
-pkg update -y
-pkg upgrade -y
-# Reinstall essential libraries
-pkg install -y proot tar wget curl
-
-# Reinstall apt and core libraries
-pkg install -y apt
-pkg install -y liblz4
-echo "[ssh-setup] Starting SSH installation and setup..."
-
 set -e
 
-# Update packages
-echo "[ssh-setup] Updating packages..."
-pkg update -y && pkg upgrade -y
+echo "[ssh-setup] Resetting Termux mirrors and updating packages..."
+pkg update -y
+pkg upgrade -y
 
-# Install OpenSSH and expect
-echo "[ssh-setup] Installing OpenSSH and expect (auto-confirming config changes)..."
-pkg install -y --option Dpkg::Options::="--force-confnew" openssh expect
+echo "[ssh-setup] Reinstalling essential libraries..."
+pkg install -y proot tar wget curl apt liblz4
+
+echo "[ssh-setup] Installing OpenSSH, expect, and termux-auth (auto-confirming config changes)..."
+pkg install -y --option Dpkg::Options::="--force-confnew" openssh expect termux-auth
 
 # Generate SSH keys if missing
 if [ ! -f ~/.ssh/id_rsa ]; then
@@ -32,16 +23,15 @@ fi
 # Set the password using expect
 PASSWORD="123changeme"
 USERNAME="$(whoami)"
-pkg install termux-auth
 echo "[ssh-setup] Setting password for user '${USERNAME}' using expect..."
 
-expect -c "
+expect <<EOF
 spawn passwd $USERNAME
-expect \"New password:\"
-send \"$PASSWORD\r\"
-expect \"Retype new password:\"
-send \"$PASSWORD\r\"
+expect "New password:"
+send "$PASSWORD\r"
+expect "Retype new password:"
+send "$PASSWORD\r"
 expect eof
-"
+EOF
 
 echo "[ssh-setup] Password has been set successfully."

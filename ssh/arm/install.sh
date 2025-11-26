@@ -32,7 +32,7 @@ fi
 # Set the password using expect
 PASSWORD="123changeme"
 USERNAME="$(whoami)"
-
+pkg install termux-auth
 echo "[ssh-setup] Setting password for user '${USERNAME}' using expect..."
 
 expect -c "

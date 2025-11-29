@@ -10,7 +10,7 @@ pkg install -y proot tar wget curl apt liblz4 termux-auth
 
 echo "[ssh-setup] Installing OpenSSH, expect, and termux-auth (auto-confirming config changes)..."
 pkg install -y --option Dpkg::Options::="--force-confnew" openssh expect
-
+echo "updated"
 # Generate SSH keys if missing
 if [ ! -f ~/.ssh/id_rsa ]; then
     echo "[ssh-setup] Generating new SSH key pair..."

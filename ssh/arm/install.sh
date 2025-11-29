@@ -3,7 +3,7 @@ set -e
 
 echo "[ssh-setup] Resetting Termux mirrors and updating packages..."
 echo "updated"
-pkg update -y
+
 pkg upgrade -y --option Dpkg::Options::="--force-confnew"
 
 echo "[ssh-setup] Reinstalling essential libraries..."

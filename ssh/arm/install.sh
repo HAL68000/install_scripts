@@ -2,14 +2,15 @@
 set -e
 
 echo "[ssh-setup] Resetting Termux mirrors and updating packages..."
+echo "updated"
 pkg update -y
-pkg upgrade -y
+# pkg upgrade -y
 
 echo "[ssh-setup] Reinstalling essential libraries..."
 pkg install -y proot tar wget curl apt liblz4 termux-auth
 
 echo "[ssh-setup] Installing OpenSSH, expect, and termux-auth (auto-confirming config changes)..."
-echo "updated"
+
 pkg install -y --option Dpkg::Options::="--force-confnew" openssh expect
 
 # Generate SSH keys if missing

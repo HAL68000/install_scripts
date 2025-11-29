@@ -28,7 +28,10 @@ USERNAME="$(whoami)"
 echo "[ssh-setup] Setting password for user '${USERNAME}' using expect..."
 
 expect <<EOF
-spawn passwd $USERNAME
+PASSWORD="123changeme"
+
+expect <<EOF
+spawn passwd
 expect "New password:"
 send "$PASSWORD\r"
 expect "Retype new password:"

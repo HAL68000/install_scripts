@@ -23,21 +23,5 @@ else
 fi
 
 echo -e "123changeme\n123changeme" | passwd
-# # Set the password using expect
-# PASSWORD="123changeme"
-# USERNAME="$(whoami)"
-# echo "[ssh-setup] Setting password for user '${USERNAME}' using expect..."
-
-# expect <<EOF
-# PASSWORD="123changeme"
-
-# expect <<EOF
-# spawn passwd
-# expect "New password:"
-# send "$PASSWORD\r"
-# expect "Retype new password:"
-# send "$PASSWORD\r"
-# expect eof
-# EOF
 
 echo "[ssh-setup] Password has been set successfully."

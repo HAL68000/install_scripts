@@ -18,7 +18,7 @@ if ! command -v n8n >/dev/null 2>&1; then
     
     # Install n8n from source (specific version)
     npm install sqlite3 --save
-    npm install -g n8n@1.116.2 --build-from-source
+    npm install -g n8n --build-from-source
 
     echo "[n8n-bootstrap] Installation completed!"
 else

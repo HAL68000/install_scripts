@@ -5,7 +5,7 @@
         "install_script": "n8n/arm/install.sh",
         "uninstall_script": "n8n/arm/uninstall.sh",
         "start_command": "n8n",
-        "stop_command": "n8n stop"
+        "stop_command": "pkill -f n8n"
     },
     {
         "name": "ssh",

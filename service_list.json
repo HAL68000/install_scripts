@@ -13,8 +13,7 @@
         "install_script": "ssh/arm/install.sh",
         "uninstall_script": "ssh/arm/uninstall.sh",
         "start_command": "sshd",
-        "stop_command": "sshd stop",
+        "stop_command": "pkill -f sshd",
         "post_installation_script": "ssh/arm/post_install.sh"
-
     }
 ]

@@ -12,7 +12,7 @@
         "description": "enable SSH access",
         "install_script": "ssh/arm/install.sh",
         "uninstall_script": "ssh/arm/uninstall.sh",
-        "start_command": "sshd",
+        "start_command": "env && sshd",
         "stop_command": "pkill -f sshd",
         "post_installation_script": "ssh/arm/post_install.sh"
     }

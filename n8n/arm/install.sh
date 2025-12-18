@@ -1,4 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
+# Created: 2025-12-18T23:55:40Z
 set -euo pipefail
 
 # Marker directory for progress/status (override with MARKER_DIR env if needed)
@@ -32,7 +33,8 @@ status "[n8n] preparazione ambiente"
 pip install setuptools
 progress 40
 export CXXFLAGS="--std=c++17"
-export GYP_DEFINES="android_ndk_path=$ANDROID_NDK_HOME"
+# Use empty default to avoid set -u error if ANDROID_NDK_HOME is unset
+export GYP_DEFINES="android_ndk_path=${ANDROID_NDK_HOME:-}"
 export N8N_SECURE_COOKIE=false
 
 status "[n8n] dipendenze node"

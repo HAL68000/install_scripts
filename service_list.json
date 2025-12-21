@@ -5,7 +5,9 @@
         "install_script": "n8n/arm/install.sh",
         "uninstall_script": "n8n/arm/uninstall.sh",
         "start_command": "n8n",
-        "stop_command": "pkill -f n8n"
+        "stop_command": "pkill -f n8n",
+        "argument_placeholder": "--tunnel",
+        "icon": "n8n/n8n.svg"
     },
     {
         "name": "ssh",
@@ -14,12 +16,14 @@
         "uninstall_script": "ssh/arm/uninstall.sh",
         "start_command": "ls && sshd",
         "stop_command": "pkill -f sshd",
-        "post_installation_script": "ssh/arm/post_install.sh"
+        "post_installation_script": "ssh/arm/post_install.sh",
+        "icon": "ssh/ssh.svg"
     },{"name": "ollama",
         "description": "local LLMs made easy",
         "install_script": "ollama/arm/install.sh",
         "uninstall_script": "ollama/arm/uninstall.sh",
         "start_command": "ollama serve",
-        "stop_command": "pkill -f 'ollama serve'"
+        "stop_command": "pkill -f 'ollama serve'",
+        "icon": "ollama/ollama.svg"
     }
 ]

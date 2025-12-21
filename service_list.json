@@ -15,5 +15,11 @@
         "start_command": "ls && sshd",
         "stop_command": "pkill -f sshd",
         "post_installation_script": "ssh/arm/post_install.sh"
+    },{"name": "ollama",
+        "description": "local LLMs made easy",
+        "install_script": "ollama/arm/install.sh",
+        "uninstall_script": "ollama/arm/uninstall.sh",
+        "start_command": "ollama serve",
+        "stop_command": "pkill -f 'ollama serve'"
     }
 ]

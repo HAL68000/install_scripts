@@ -13,13 +13,13 @@ fi
 
 PORT=8022
 echo
-echo "[ssh-setup] SSH server is installed. To start the SSH server, tap on the "START" button."
+echo "[ssh-setup] SSH server is installed. To start the SSH server, tap on the \"START\" button."
 echo "[ssh-setup] Connection info:"
 echo "    ssh ${USERNAME}@${IP} -p ${PORT}"
 echo
 echo "[ssh-setup] Password for the account has been set to: ${PASSWORD}"
 echo "SECURITY NOTE: The password '123changeme' is weak. Change it as soon as possible with: passwd"
 echo
-echo "[ssh-setup] To stop the SSH server, tap on the "STOP" button."
+echo "[ssh-setup] To stop the SSH server, tap on the \"STOP\" button."
 
 echo "[ssh-setup] SSH installation completed!"

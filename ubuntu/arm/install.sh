@@ -14,7 +14,7 @@ status "[ubuntu] starting"
 echo "[ubuntu-bootstrap] Starting Ubuntu installation..."
 
 status "[ubuntu] updating packages"
-pkg update
+pkg update -y --option Dpkg::Options::="--force-confnew"
 progress 20
 
 status "[ubuntu] installing proot-distro"

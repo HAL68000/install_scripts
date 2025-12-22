@@ -18,7 +18,7 @@ pkg update -y --option Dpkg::Options::="--force-confnew"
 progress 20
 
 status "[ubuntu] installing proot-distro"
-pkg install root-distro -y
+pkg install proot-distro -y
 progress 50
 
 status "[ubuntu] installing ubuntu distro"

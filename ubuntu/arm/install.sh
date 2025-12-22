@@ -23,7 +23,7 @@ progress 50
 
 status "[ubuntu] installing ubuntu distro"
 echo "[ubuntu-bootstrap] Installing Ubuntu distro (this may take a few minutes)..."
-proot-distro install ubuntu -y
+proot-distro install ubuntu
 progress 90
 
 echo "[ubuntu-bootstrap] Installation completed!"

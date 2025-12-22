@@ -18,12 +18,25 @@
         "stop_command": "pkill -f sshd",
         "post_installation_script": "ssh/arm/post_install.sh",
         "icon": "ssh/icon.png"
-    },{"name": "ollama",
+    },
+    {
+        "name": "ollama",
         "description": "local LLMs made easy",
         "install_script": "ollama/arm/install.sh",
         "uninstall_script": "ollama/arm/uninstall.sh",
         "start_command": "ollama serve",
         "stop_command": "pkill -f 'ollama serve'",
+        "post_installation_script": "ollama/arm/post_install.sh",
         "icon": "ollama/icon.png"
+    },
+    {
+        "name": "ubuntu",
+        "description": "Ubuntu distro on Termux",
+        "install_script": "ubuntu/arm/install.sh",
+        "uninstall_script": "ubuntu/arm/uninstall.sh",
+        "start_command": "proot-distro login ubuntu",
+        "stop_command": "pkill -f 'proot-distro'",
+        "post_installation_script": "ubuntu/arm/post_install.sh",
+        "icon": "ubuntu/icon.png"
     }
 ]

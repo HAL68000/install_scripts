@@ -19,12 +19,8 @@ progress 20
 
 status "[ubuntu] installing proot-distro"
 pkg install -y proot-distro 
-progress 50
+progress 60
 
-status "[ubuntu] installing ubuntu distro"
-echo "[ubuntu-bootstrap] Installing Ubuntu distro (this may take a few minutes)..."
-proot-distro install ubuntu
-progress 90
 
 echo "[ubuntu-bootstrap] Installation completed!"
 status "[ubuntu] completed"

@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Created: 2025-12-23T00:00:00Z
-set -euo pipefail
+# set -euo pipefail
 
 # Marker directory for progress/status (override with MARKER_DIR env if needed)
 MARKER_DIR="${MARKER_DIR:-$PREFIX/var/lib/ubuntu}"

@@ -34,7 +34,7 @@
         "description": "Ubuntu distro on Termux",
         "install_script": "ubuntu/arm/install.sh",
         "uninstall_script": "ubuntu/arm/uninstall.sh",
-        "start_command": "proot-distro install ubuntu",
+        "start_command": "proot-distro install ubuntu && proot-distro login ubuntu && ls -la",
         "stop_command": "pkill -f 'proot-distro'",
         "post_installation_script": "ubuntu/arm/post_install.sh",
         "icon": "ubuntu/icon.png"

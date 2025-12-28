@@ -38,5 +38,15 @@
         "stop_command": "pkill -f 'proot-distro'",
         "post_installation_script": "ubuntu/arm/post_install.sh",
         "icon": "ubuntu/icon.png"
+    },
+    {
+        "name": "mosquitto",
+        "description": "MQTT message broker",
+        "install_script": "mosquitto/arm/install.sh",
+        "uninstall_script": "mosquitto/arm/uninstall.sh",
+        "start_command": "mosquitto -c $PREFIX/etc/mosquitto/mosquitto.conf",
+        "stop_command": "pkill -f mosquitto",
+        "post_installation_script": "mosquitto/arm/post_install.sh",
+        "icon": "mosquitto/icon.png"
     }
 ]

@@ -26,7 +26,7 @@
         "start_command": "ollama serve",
         "stop_command": "pkill -f 'ollama serve'",
         "post_installation_script": "scripts/ollama/arm/post_install.sh",
-        "icon": "ollama/icon.png"
+        "icon": "scripts/ollama/icon.png"
     },
     {
         "name": "ubuntu",
@@ -36,7 +36,7 @@
         "start_command": "proot-distro install ubuntu && proot-distro login ubuntu && ls -la",
         "stop_command": "pkill -f 'proot-distro'",
         "post_installation_script": "scripts/ubuntu/arm/post_install.sh",
-        "icon": "ubuntu/icon.png"
+        "icon": "scripts/ubuntu/icon.png"
     },
     {
         "name": "mosquitto",
@@ -46,6 +46,6 @@
         "start_command": "mosquitto -c $PREFIX/etc/mosquitto/mosquitto.conf",
         "stop_command": "pkill -f mosquitto",
         "post_installation_script": "scripts/mosquitto/arm/post_install.sh",
-        "icon": "scriptsmosquitto/icon.png"
+        "icon": "scripts/mosquitto/icon.png"
     }
 ]

@@ -1,13 +1,11 @@
-[
+[    
     {
-        "name": "n8n",
+        "name": "Node Red",
         "description": "automate tasks and workflows",
-        "install_script": "n8n/arm/install.sh",
-        "uninstall_script": "n8n/arm/uninstall.sh",
-        "start_command": "n8n",
-        "stop_command": "pkill -f n8n",
-        "argument_placeholder": "--tunnel",
-        "icon": "n8n/icon.png"
+        "install_script": "node_red/arm/install.sh",
+        "uninstall_script": "node_red/arm/uninstall.sh",
+        "start_command": "node-red",
+        "stop_command": "pkill node-red"
     },
     {
         "name": "ssh",

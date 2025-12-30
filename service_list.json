@@ -47,5 +47,15 @@
         "stop_command": "pkill -f mosquitto",
         "post_installation_script": "scripts/mosquitto/arm/post_install.sh",
         "icon": "scripts/mosquitto/icon.png"
+    },
+    {
+        "name": "nextjs-ollama-llm-ui",
+        "description": "Web UI for Ollama LLMs",
+        "install_script": "scripts/nextjs-ollama-llm-ui/arm/install.sh",
+        "uninstall_script": "scripts/nextjs-ollama-llm-ui/arm/uninstall.sh",
+        "start_command": "cd $HOME/nextjs-ollama-llm-ui && npm run dev",
+        "stop_command": "pkill -f 'npm run dev'",
+        "post_installation_script": "scripts/nextjs-ollama-llm-ui/arm/post_install.sh",
+        "icon": "scripts/nextjs-ollama-llm-ui/icon.png"
     }
 ]

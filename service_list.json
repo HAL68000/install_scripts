@@ -67,5 +67,16 @@
         "post_installation_script": "scripts/nextjs-ollama-llm-ui/arm/post_install.sh",
         "icon": "scripts/nextjs-ollama-llm-ui/icon.png",
         "open_in_browser": true
+    },
+    {
+        "name": "webtorrent",
+        "description": "WebTorrent Desktop client",
+        "install_script": "scripts/webtorrent/arm/install.sh",
+        "uninstall_script": "scripts/webtorrent/arm/uninstall.sh",
+        "start_command": "cd $HOME/webtorrent-desktop && npm start",
+        "stop_command": "pkill -f 'webtorrent-desktop'",
+        "post_installation_script": "scripts/webtorrent/arm/post_install.sh",
+        "icon": "scripts/webtorrent/icon.png",
+        "open_in_browser": false
     }
 ]

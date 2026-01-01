@@ -31,7 +31,7 @@ pkg install -y nodejs
 progress 50
 
 status "[webtorrent] installing webtorrent"
-npm install -g webtorrent-cli
+npm install -g webtorrent
 progress 90
 
 echo "[webtorrent-bootstrap] Installation completed!"

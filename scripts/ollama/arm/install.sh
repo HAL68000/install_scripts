@@ -30,7 +30,7 @@ pkg install -y curl git build-essential
 progress 30
 
 status "[ollama] downloading ollama"
-curl -fsSL https://ollama.ai/install.sh | sh
+curl -fsSL https://ollama.com/install.sh | sh
 progress 70
 
 status "[ollama] configuring"

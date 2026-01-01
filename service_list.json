@@ -6,7 +6,8 @@
         "uninstall_script": "scripts/node_red/arm/uninstall.sh",
         "start_command": "node-red",
         "stop_command": "pkill node-red",
-        "icon": "scripts/node_red/icon.png"
+        "icon": "scripts/node_red/icon.png", 
+        "port": 1880
     },
     {
         "name": "ssh",
@@ -16,7 +17,8 @@
         "start_command": "ls && sshd",
         "stop_command": "pkill -f sshd",
         "post_installation_script": "scripts/ssh/arm/post_install.sh",
-        "icon": "scripts/ssh/icon.png"
+        "icon": "scripts/ssh/icon.png", 
+        "port": 8022
     },
     {
         "name": "ollama",
@@ -26,7 +28,8 @@
         "start_command": "ollama serve",
         "stop_command": "pkill -f 'ollama serve'",
         "post_installation_script": "scripts/ollama/arm/post_install.sh",
-        "icon": "scripts/ollama/icon.png"
+        "icon": "scripts/ollama/icon.png",
+        "port": 11434
     },
     {
         "name": "ubuntu",
@@ -46,7 +49,8 @@
         "start_command": "mosquitto -c $PREFIX/etc/mosquitto/mosquitto.conf",
         "stop_command": "pkill -f mosquitto",
         "post_installation_script": "scripts/mosquitto/arm/post_install.sh",
-        "icon": "scripts/mosquitto/icon.png"
+        "icon": "scripts/mosquitto/icon.png",
+        "port": 1883
     },
     {
         "name": "nextjs-ollama-llm-ui",

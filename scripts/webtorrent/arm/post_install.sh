@@ -5,11 +5,13 @@ set -euo pipefail
 echo "[webtorrent-post-install] Running post-installation tasks..."
 
 # Verify installation
-if [ -d "$HOME/webtorrent-desktop" ]; then
-  echo "[webtorrent-post-install] WebTorrent Desktop installed successfully at $HOME/webtorrent-desktop"
-  echo "[webtorrent-post-install] To start WebTorrent, run: cd ~/webtorrent-desktop && npm start"
+if command -v webtorrent >/dev/null 2>&1; then
+  echo "[webtorrent-post-install] WebTorrent CLI installed successfully"
+  WEBTORRENT_VERSION=$(webtorrent --version)
+  echo "[webtorrent-post-install] WebTorrent version: $WEBTORRENT_VERSION"
+  echo "[webtorrent-post-install] Usage: webtorrent [magnet-link or torrent-file]"
 else
-  echo "[webtorrent-post-install] ERROR: WebTorrent Desktop directory not found!"
+  echo "[webtorrent-post-install] ERROR: WebTorrent not found!"
   exit 1
 fi
 
@@ -19,14 +21,6 @@ if command -v node >/dev/null 2>&1; then
   echo "[webtorrent-post-install] Node.js version: $NODE_VERSION"
 else
   echo "[webtorrent-post-install] WARNING: Node.js not found!"
-fi
-
-# Check npm version
-if command -v npm >/dev/null 2>&1; then
-  NPM_VERSION=$(npm --version)
-  echo "[webtorrent-post-install] npm version: $NPM_VERSION"
-else
-  echo "[webtorrent-post-install] WARNING: npm not found!"
 fi
 
 echo "[webtorrent-post-install] Post-installation completed!"

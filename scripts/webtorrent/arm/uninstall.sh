@@ -9,14 +9,14 @@ status() { mkdir -p "$MARKER_DIR" && echo "$1" > "$MARKER_DIR/status"; }
 progress 0
 status "[webtorrent] uninstalling"
 
-echo "[webtorrent-uninstall] Removing webtorrent-desktop..."
+echo "[webtorrent-uninstall] Removing webtorrent..."
 
-if [ -d "$HOME/webtorrent-desktop" ]; then
-  rm -rf "$HOME/webtorrent-desktop"
-  echo "[webtorrent-uninstall] webtorrent-desktop removed"
+if command -v webtorrent >/dev/null 2>&1; then
+  npm uninstall -g webtorrent-cli
+  echo "[webtorrent-uninstall] webtorrent-cli removed"
   progress 50
 else
-  echo "[webtorrent-uninstall] webtorrent-desktop not found"
+  echo "[webtorrent-uninstall] webtorrent not found"
   progress 50
 fi
 

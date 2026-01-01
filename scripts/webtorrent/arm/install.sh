@@ -11,9 +11,9 @@ status() { echo "$1" > "$MARKER_DIR/status"; }
 progress 0
 status "[webtorrent] starting"
 
-# Check if webtorrent-cli is already installed
-if command -v webtorrent &> /dev/null; then
-  echo "[webtorrent-bootstrap] webtorrent-cli already installed"
+# Check if webtorrent is already installed
+if command -v webtorrent >/dev/null 2>&1; then
+  echo "[webtorrent-bootstrap] webtorrent already installed"
   webtorrent --version
   status "[webtorrent] completed"
   progress 100
@@ -30,13 +30,11 @@ status "[webtorrent] installing nodejs"
 pkg install -y nodejs
 progress 50
 
-status "[webtorrent] installing webtorrent-cli"
+status "[webtorrent] installing webtorrent"
 npm install -g webtorrent-cli
 progress 90
 
 echo "[webtorrent-bootstrap] Installation completed!"
-echo "Usage: webtorrent [magnet-link or torrent-file]"
 webtorrent --version
 status "[webtorrent] completed"
 progress 100
-

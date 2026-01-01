@@ -11,9 +11,10 @@ status() { echo "$1" > "$MARKER_DIR/status"; }
 progress 0
 status "[webtorrent] starting"
 
-# Check if webtorrent-desktop is already installed
-if [ -d "$HOME/webtorrent-desktop" ]; then
-  echo "[webtorrent-bootstrap] webtorrent-desktop already exists at $HOME/webtorrent-desktop"
+# Check if webtorrent-cli is already installed
+if command -v webtorrent &> /dev/null; then
+  echo "[webtorrent-bootstrap] webtorrent-cli already installed"
+  webtorrent --version
   status "[webtorrent] completed"
   progress 100
   exit 0
@@ -23,26 +24,19 @@ echo "[webtorrent-bootstrap] starting installation..."
 
 status "[webtorrent] upgrading packages"
 pkg upgrade -y --option Dpkg::Options::="--force-confnew"
-progress 10
-
-status "[webtorrent] installing git"
-pkg install -y git
-progress 30
+progress 20
 
 status "[webtorrent] installing nodejs"
 pkg install -y nodejs
 progress 50
 
-status "[webtorrent] cloning repository"
-cd "$HOME"
-git clone https://github.com/webtorrent/webtorrent-desktop.git
-progress 70
-
-status "[webtorrent] installing dependencies"
-cd webtorrent-desktop
-npm install
+status "[webtorrent] installing webtorrent-cli"
+npm install -g webtorrent-cli
 progress 90
 
 echo "[webtorrent-bootstrap] Installation completed!"
+echo "Usage: webtorrent [magnet-link or torrent-file]"
+webtorrent --version
 status "[webtorrent] completed"
 progress 100
+

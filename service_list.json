@@ -7,7 +7,8 @@
         "start_command": "node-red",
         "stop_command": "pkill node-red",
         "icon": "scripts/node_red/icon.png", 
-        "port": 1880
+        "port": 1880,
+        "open_in_browser": true
     },
     {
         "name": "ssh",
@@ -18,7 +19,8 @@
         "stop_command": "pkill -f sshd",
         "post_installation_script": "scripts/ssh/arm/post_install.sh",
         "icon": "scripts/ssh/icon.png", 
-        "port": 8022
+        "port": 8022,
+        "open_in_browser": false
     },
     {
         "name": "ollama",
@@ -29,7 +31,8 @@
         "stop_command": "pkill -f 'ollama serve'",
         "post_installation_script": "scripts/ollama/arm/post_install.sh",
         "icon": "scripts/ollama/icon.png",
-        "port": 11434
+        "port": 11434,
+        "open_in_browser": true
     },
     {
         "name": "ubuntu",
@@ -39,7 +42,8 @@
         "start_command": "proot-distro install ubuntu && proot-distro login ubuntu && ls -la",
         "stop_command": "pkill -f 'proot-distro'",
         "post_installation_script": "scripts/ubuntu/arm/post_install.sh",
-        "icon": "scripts/ubuntu/icon.png"
+        "icon": "scripts/ubuntu/icon.png",
+        "open_in_browser": false
     },
     {
         "name": "mosquitto",
@@ -50,7 +54,8 @@
         "stop_command": "pkill -f mosquitto",
         "post_installation_script": "scripts/mosquitto/arm/post_install.sh",
         "icon": "scripts/mosquitto/icon.png",
-        "port": 1883
+        "port": 1883,
+        "open_in_browser": false
     },
     {
         "name": "nextjs-ollama-llm-ui",
@@ -60,6 +65,7 @@
         "start_command": "cd $HOME/nextjs-ollama-llm-ui && npm run dev",
         "stop_command": "pkill -f 'npm run dev'",
         "post_installation_script": "scripts/nextjs-ollama-llm-ui/arm/post_install.sh",
-        "icon": "scripts/nextjs-ollama-llm-ui/icon.png"
+        "icon": "scripts/nextjs-ollama-llm-ui/icon.png",
+        "open_in_browser": true
     }
 ]

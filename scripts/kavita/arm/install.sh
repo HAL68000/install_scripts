@@ -30,10 +30,10 @@ pkg install -y curl jq tar
 progress 20
 
 status "[kavita] fetching latest release"
-LATEST_URL=$(curl -s https://api.github.com/repos/Kareadita/Kavita/releases/latest | jq -r '.assets[] | select(.name | contains("kavita-linux-arm64.tar.gz")) | .browser_download_url')
+LATEST_URL=$(curl -s https://api.github.com/repos/Kareadita/Kavita/releases/latest | jq -r '.assets[] | select(.name | contains("kavita-linux-arm.tar.gz")) | .browser_download_url')
 
 if [ -z "$LATEST_URL" ]; then
-  echo "[kavita-bootstrap] ERROR: Could not find kavita-linux-arm64.tar.gz in latest release"
+  echo "[kavita-bootstrap] ERROR: Could not find kavita-linux-arm.tar.gz in latest release"
   status "[kavita] failed"
   exit 1
 fi

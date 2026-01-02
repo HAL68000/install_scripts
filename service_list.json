@@ -79,5 +79,17 @@
         "icon": "scripts/syncthing/icon.png",
         "port": 8384,
         "open_in_browser": true
+    },
+    {
+        "name": "kavita",
+        "description": "Digital library for manga and comics",
+        "install_script": "scripts/kavita/arm/install.sh",
+        "uninstall_script": "scripts/kavita/arm/uninstall.sh",
+        "start_command": "$HOME/Kavita/Kavita",
+        "stop_command": "pkill -f Kavita",
+        "post_installation_script": "scripts/kavita/arm/post_install.sh",
+        "icon": "scripts/kavita/icon.png",
+        "port": 5000,
+        "open_in_browser": true
     }
 ]

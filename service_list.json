@@ -69,14 +69,15 @@
         "open_in_browser": true
     },
     {
-        "name": "webtorrent",
-        "description": "WebTorrent streaming client",
-        "install_script": "scripts/webtorrent/arm/install.sh",
-        "uninstall_script": "scripts/webtorrent/arm/uninstall.sh",
-        "start_command": "webtorrent",
-        "stop_command": "pkill -f webtorrent",
-        "post_installation_script": "scripts/webtorrent/arm/post_install.sh",
-        "icon": "scripts/webtorrent/icon.png",
-        "open_in_browser": false
+        "name": "syncthing",
+        "description": "Continuous file synchronization",
+        "install_script": "scripts/syncthing/arm/install.sh",
+        "uninstall_script": "scripts/syncthing/arm/uninstall.sh",
+        "start_command": "syncthing",
+        "stop_command": "pkill -f syncthing",
+        "post_installation_script": "scripts/syncthing/arm/post_install.sh",
+        "icon": "scripts/syncthing/icon.png",
+        "port": 8384,
+        "open_in_browser": true
     }
 ]

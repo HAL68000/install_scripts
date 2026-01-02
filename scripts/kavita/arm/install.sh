@@ -43,11 +43,11 @@ progress 30
 
 status "[kavita] downloading Kavita"
 cd "$HOME"
-curl -L -o kavita-linux-arm64.tar.gz "$LATEST_URL"
+curl -L -o kavita-linux-arm.tar.gz "$LATEST_URL"
 progress 60
 
 status "[kavita] extracting archive"
-tar -xzf kavita-linux-arm64.tar.gz
+tar -xzf kavita-linux-arm.tar.gz
 progress 80
 
 status "[kavita] setting permissions"
@@ -55,7 +55,7 @@ chmod +x "$HOME/Kavita/Kavita"
 progress 90
 
 status "[kavita] cleaning up"
-rm -f kavita-linux-arm64.tar.gz
+rm -f kavita-linux-arm.tar.gz
 progress 95
 
 echo "[kavita-bootstrap] Installation completed!"

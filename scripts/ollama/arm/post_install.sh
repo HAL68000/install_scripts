@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # Ollama post-installation setup script
-proot-distro install ubuntu && proot-distro login ubuntu && apt update && apt upgrade -y && sudo curl -fsSL https://ollama.com/install.sh | sh && mkdir -p "$PREFIX/var/lib/ollama"
+# proot-distro install ubuntu && proot-distro login ubuntu && apt update && apt upgrade -y && sudo curl -fsSL https://ollama.com/install.sh | sh && mkdir -p "$PREFIX/var/lib/ollama"
 echo
 echo "[ollama-setup] Ollama has been installed successfully!"
 echo

@@ -30,6 +30,7 @@ pkg install -y curl git build-essential
 progress 30
 
 status "[ollama] installing ubuntu and ollama"
+export PROOT_NO_SECCOMP=1
 proot-distro install ubuntu && proot-distro exec ubuntu -- bash -lc "apt update && apt upgrade -y && curl -fsSL https://ollama.com/install.sh | sh" && mkdir -p "$PREFIX/var/lib/ollama"
 progress 80
 

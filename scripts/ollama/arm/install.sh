@@ -26,7 +26,7 @@ pkg upgrade -y --option Dpkg::Options::="--force-confnew"
 progress 10
 
 status "[ollama] installing tools"
-pkg install -y curl git build-essential proot-distro 
+pkg install -y curl git build-essential 
 progress 30
 
 echo "[ollama-bootstrap] Installation completed!"

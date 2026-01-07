@@ -29,6 +29,9 @@ status "[ollama] installing tools"
 pkg install -y curl git build-essential 
 progress 30
 
+proot-distro install ubuntu && proot-distro login ubuntu && apt update && apt upgrade -y && sudo curl -fsSL https://ollama.com/install.sh | sh && mkdir -p "$PREFIX/var/lib/ollama"
+progress 80
+
 echo "[ollama-bootstrap] Installation completed!"
 status "[ollama] completed"
 progress 100

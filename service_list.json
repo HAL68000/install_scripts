@@ -2,7 +2,7 @@
     {
         "name": "Node Red",
         "description": "automate tasks and workflows",
-        "install_script": "scripts/node_red/arm/install.sh",
+        "install_script": ["scripts/node_red/arm/install.sh"],
         "uninstall_script": "scripts/node_red/arm/uninstall.sh",
         "start_command": "node-red",
         "stop_command": "pkill node-red",
@@ -13,7 +13,7 @@
     {
         "name": "ssh",
         "description": "enable SSH access",
-        "install_script": "scripts/ssh/arm/install.sh",
+        "install_script": ["scripts/ssh/arm/install.sh"],
         "uninstall_script": "scripts/ssh/arm/uninstall.sh",
         "start_command": "ls && sshd",
         "stop_command": "pkill -f sshd",
@@ -25,7 +25,7 @@
     {
         "name": "ollama",
         "description": "local LLMs made easy",
-        "install_script": "scripts/ollama/arm/install.sh",
+        "install_script": ["scripts/ollama/arm/install.sh", "scripts/ollama/arm/install_ubuntu.sh"],
         "uninstall_script": "scripts/ollama/arm/uninstall.sh",
         "start_command": "proot-distro exec ubuntu -- ollama serve",
         "stop_command": "pkill -f 'ollama serve'",
@@ -37,7 +37,7 @@
     {
         "name": "ubuntu",
         "description": "Ubuntu distro on Termux",
-        "install_script": "scripts/ubuntu/arm/install.sh",
+        "install_script": ["scripts/ubuntu/arm/install.sh"],
         "uninstall_script": "scripts/ubuntu/arm/uninstall.sh",
         "start_command": "proot-distro install ubuntu && proot-distro login ubuntu && ls -la",
         "stop_command": "pkill -f 'proot-distro'",
@@ -48,7 +48,7 @@
     {
         "name": "mosquitto",
         "description": "MQTT message broker",
-        "install_script": "scripts/mosquitto/arm/install.sh",
+        "install_script": ["scripts/mosquitto/arm/install.sh"],
         "uninstall_script": "scripts/mosquitto/arm/uninstall.sh",
         "start_command": "mosquitto -c $PREFIX/etc/mosquitto/mosquitto.conf",
         "stop_command": "pkill -f mosquitto",
@@ -60,7 +60,7 @@
     {
         "name": "nextjs-ollama-llm-ui",
         "description": "Web UI for Ollama LLMs",
-        "install_script": "scripts/nextjs-ollama-llm-ui/arm/install.sh",
+        "install_script": ["scripts/nextjs-ollama-llm-ui/arm/install.sh"],
         "uninstall_script": "scripts/nextjs-ollama-llm-ui/arm/uninstall.sh",
         "start_command": "cd $HOME/nextjs-ollama-llm-ui && npm run dev",
         "stop_command": "pkill -f 'npm run dev'",
@@ -71,7 +71,7 @@
     {
         "name": "syncthing",
         "description": "Continuous file synchronization",
-        "install_script": "scripts/syncthing/arm/install.sh",
+        "install_script": ["scripts/syncthing/arm/install.sh"],
         "uninstall_script": "scripts/syncthing/arm/uninstall.sh",
         "start_command": "syncthing",
         "stop_command": "pkill -f syncthing",
@@ -83,7 +83,7 @@
     {
         "name": "kavita",
         "description": "Digital library for manga and comics",
-        "install_script": "scripts/kavita/arm/install.sh",
+        "install_script": ["scripts/kavita/arm/install.sh"],
         "uninstall_script": "scripts/kavita/arm/uninstall.sh",
         "start_command": "$HOME/Kavita/Kavita",
         "stop_command": "pkill -f Kavita",

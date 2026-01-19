@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-proot-distro exec ubuntu -- bash -lc "apt update && apt upgrade -y && curl -fsSL https://ollama.com/install.sh | sh" && mkdir -p "$PREFIX/var/lib/ollama
-
+#tty=true
 # Created: 2025-12-22T00:00:00Z
 set -euo pipefail
 

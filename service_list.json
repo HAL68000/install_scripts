@@ -25,7 +25,7 @@
     {
         "name": "ollama",
         "description": "local LLMs made easy",
-        "install_script": ["scripts/ollama/arm/install.sh"],
+        "install_script": ["scripts/ollama/arm/install.sh", "scripts/ollama/arm/install_ubuntu.sh"],
         "uninstall_script": "scripts/ollama/arm/uninstall.sh",
         "start_command": "proot-distro exec ubuntu -- ollama serve",
         "stop_command": "pkill -f 'ollama serve'",

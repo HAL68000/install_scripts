@@ -29,12 +29,12 @@ status "[ollama] installing tools"
 pkg install -y curl git build-essential 
 progress 30
 
-status "[ollama] installing ubuntu"
-proot-distro install ubuntu
-progress 80
-status "[ollama] installing ollama"
-proot-distro exec ubuntu -- bash -lc "apt update && apt upgrade -y && curl -fsSL https://ollama.com/install.sh | sh" && mkdir -p "$PREFIX/var/lib/ollama
-progress 90
-echo "[ollama-bootstrap] Installation completed!"
-status "[ollama] completed"
-progress 100
+# status "[ollama] installing ubuntu"
+# proot-distro install ubuntu
+# progress 80
+# status "[ollama] installing ollama"
+# proot-distro exec ubuntu -- bash -lc "apt update && apt upgrade -y && curl -fsSL https://ollama.com/install.sh | sh" && mkdir -p "$PREFIX/var/lib/ollama
+# progress 90
+# echo "[ollama-bootstrap] Installation completed!"
+# status "[ollama] completed"
+# progress 100

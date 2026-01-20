@@ -25,6 +25,8 @@
     {
         "name": "ollama",
         "description": "local LLMs made easy",
+        "pre_installation_instructions": "scripts/ollama/pre_install.md",
+        "pre_installation_commands": ["proot-distro install ubuntu"],
         "install_script": ["scripts/ollama/arm/install.sh", "scripts/ollama/arm/install_ubuntu.sh"],
         "uninstall_script": "scripts/ollama/arm/uninstall.sh",
         "start_command": "proot-distro exec ubuntu -- ollama serve",
